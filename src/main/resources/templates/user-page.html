@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .center {
+            background-color: #fff;
+            width: 400px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #001277;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            display: block;
+            margin-bottom: 8px;
+            color: #001277;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+        }
+
+        .success-message {
+            background-color: #5e057e;
+            color: #fff;
+            padding: 10px;
+            border-radius: 3px;
+            text-align: center;
+        }
+    </style>
+    <title>User Page</title>
+</head>
+<body>
+<div class = "center">
+    <h1>User Information</h1>
+    <p>Username: <span th:text="${user.username}"></span></p>
+    <p>Full Name: <span th:text="${user.fullname}"></span></p>
+    <p>Email: <span th:text="${user.email}"></span></p>
+    <p>City: <span th:text="${user.city}"></span></p>
+    <p>Phone: <span th:text="${user.phoneNumber}"></span></p>
+</div>
+</body>
+</html>
